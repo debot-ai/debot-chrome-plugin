@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>删推监控</title>
+    <link rel="stylesheet" href="./popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <div>
+            <span class="eyebrow">debot extension</span>
+            <h1>删推监控</h1>
+          </div>
+        </div>
+        <button id="refreshButton" class="icon-button" title="刷新" aria-label="刷新监控列表">刷新</button>
+      </header>
+
+      <section class="quota-card">
+        <div>
+          <span class="quota-title">额度使用</span>
+          <p id="quotaText">删推监控额度 -/20</p>
+        </div>
+        <span id="lastCheckText" class="quota-meta">最近检测：-</span>
+        <div class="quota-bar" aria-hidden="true">
+          <span id="quotaBarFill"></span>
+        </div>
+      </section>
+
+      <nav class="tabs">
+        <button class="tab is-active" data-tab="active">监控中</button>
+        <button class="tab" data-tab="history">历史</button>
+      </nav>
+
+      <section id="statusMessage" class="message" hidden></section>
+      <section id="list" class="list"></section>
+    </main>
+    <script src="./popup.js"></script>
+  </body>
+</html>

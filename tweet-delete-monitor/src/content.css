@@ -1,0 +1,120 @@
+.debot-delete-monitor-author-row {
+  align-items: center !important;
+  display: inline-flex !important;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+}
+
+.debot-delete-monitor-action {
+  align-items: center;
+  border: 1px solid rgba(193, 154, 0, 0.32);
+  border-radius: 999px;
+  background: rgba(249, 223, 67, 0.18);
+  color: rgb(2, 5, 10);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  gap: 5px;
+  justify-content: center;
+  line-height: 18px;
+  margin: 4px 0 8px;
+  min-height: 26px;
+  padding: 3px 10px;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+  white-space: nowrap;
+}
+
+.debot-delete-monitor-action::before {
+  background: currentColor;
+  border-radius: 999px;
+  content: "";
+  height: 6px;
+  opacity: 0.7;
+  width: 6px;
+}
+
+.debot-delete-monitor-action.is-author-inline {
+  font-size: 12px;
+  line-height: 16px;
+  margin: 0 0 0 8px;
+  min-height: 22px;
+  padding: 2px 8px;
+  vertical-align: middle;
+}
+
+.debot-delete-monitor-action.is-before-text {
+  margin: 4px 0 8px;
+}
+
+.debot-delete-monitor-action:hover {
+  border-color: rgba(193, 154, 0, 0.52);
+  background: rgba(249, 223, 67, 0.32);
+  box-shadow: 0 4px 14px rgba(193, 154, 0, 0.12);
+}
+
+.debot-delete-monitor-action:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.debot-delete-monitor-action:focus-visible {
+  outline: 2px solid rgba(249, 223, 67, 0.55);
+  outline-offset: 2px;
+}
+
+.debot-delete-monitor-action:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.debot-delete-monitor-action[data-state="loading"]::before {
+  background: transparent;
+  border: 2px solid rgba(2, 5, 10, 0.18);
+  border-top-color: currentColor;
+  height: 8px;
+  opacity: 1;
+  width: 8px;
+  animation: debot-spin 680ms linear infinite;
+}
+
+.debot-delete-monitor-action.is-success {
+  border-color: rgba(18, 183, 106, 0.38);
+  background: rgba(18, 183, 106, 0.12);
+  color: rgb(3, 152, 85);
+}
+
+.debot-delete-monitor-action.is-error {
+  border-color: rgba(217, 45, 32, 0.36);
+  background: rgba(217, 45, 32, 0.1);
+  color: rgb(217, 45, 32);
+}
+
+.debot-delete-monitor-error-tip {
+  border: 1px solid rgba(217, 45, 32, 0.24);
+  border-radius: 999px;
+  background: rgba(255, 241, 242, 0.98);
+  color: rgb(180, 35, 24);
+  display: inline-flex;
+  flex: 0 1 auto;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-left: 6px;
+  max-width: 280px;
+  padding: 3px 9px;
+  vertical-align: middle;
+}
+
+@keyframes debot-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

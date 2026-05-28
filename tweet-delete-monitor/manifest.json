@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "debot 删推监控",
+  "description": "在 X/Twitter 上添加指定推文删推监控，并查看监控中与历史记录。",
+  "version": "0.1.0",
+  "permissions": ["activeTab", "alarms", "notifications", "sidePanel"],
+  "host_permissions": [
+    "https://debot.ai/*",
+    "https://*.debot.ai/*",
+    "https://x.com/*",
+    "https://twitter.com/*"
+  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://x.com/*", "https://twitter.com/*"],
+      "js": ["src/content.js"],
+      "css": ["src/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "删推监控"
+  },
+  "side_panel": {
+    "default_path": "src/popup.html"
+  }
+}

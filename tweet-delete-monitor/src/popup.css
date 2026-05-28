@@ -1,0 +1,410 @@
+:root {
+  --debot-brand: #f9df43;
+  --debot-brand-hover: #e6c933;
+  --debot-brand-soft: rgba(249, 223, 67, 0.18);
+  --debot-brand-border: rgba(193, 154, 0, 0.3);
+  --debot-black: #02050a;
+  --debot-surface: #ffffff;
+  --debot-bg: #f5f5f7;
+  --debot-border: #e6e7e9;
+  --debot-muted: #71727d;
+  color: var(--debot-black);
+  font-family:
+    Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-width: 360px;
+  background: var(--debot-bg);
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 100vh;
+  padding: 14px;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  min-width: 0;
+}
+
+.brand-mark {
+  align-items: center;
+  border-radius: 12px;
+  background: var(--debot-brand);
+  box-shadow: 0 8px 18px rgba(193, 154, 0, 0.18);
+  display: inline-flex;
+  flex: 0 0 auto;
+  height: 36px;
+  justify-content: center;
+  width: 36px;
+}
+
+.brand-mark::before {
+  border: 2px solid var(--debot-black);
+  border-radius: 999px;
+  content: "";
+  height: 12px;
+  width: 12px;
+}
+
+.eyebrow,
+.section-label,
+.quota-title {
+  color: #64748b;
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: var(--debot-black);
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+
+p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 2px 0 0;
+}
+
+button {
+  align-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: var(--debot-brand);
+  color: var(--debot-black);
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 18px;
+  min-height: 32px;
+  padding: 7px 12px;
+  transition:
+    background 160ms ease,
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+  white-space: nowrap;
+}
+
+button:hover:not(:disabled) {
+  background: var(--debot-brand-hover);
+  box-shadow: 0 8px 18px rgba(193, 154, 0, 0.16);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+button:disabled {
+  cursor: default;
+  opacity: 0.58;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid rgba(249, 223, 67, 0.55);
+  outline-offset: 2px;
+}
+
+button[data-loading="1"] {
+  opacity: 0.78;
+}
+
+button[data-loading="1"]::before {
+  border: 2px solid rgba(2, 5, 10, 0.18);
+  border-top-color: var(--debot-black);
+  border-radius: 999px;
+  content: "";
+  height: 12px;
+  margin-right: 6px;
+  width: 12px;
+  animation: spin 680ms linear infinite;
+}
+
+.icon-button {
+  border: 1px solid var(--debot-border);
+  background: var(--debot-surface);
+  color: var(--debot-black);
+  min-width: 56px;
+}
+
+.icon-button:hover:not(:disabled) {
+  border-color: var(--debot-brand-border);
+  background: var(--debot-brand-soft);
+  box-shadow: none;
+}
+
+.quota-card,
+.item,
+.message,
+.empty {
+  border: 1px solid var(--debot-border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+.quota-card {
+  display: grid;
+  gap: 10px;
+  padding: 12px;
+}
+
+.quota-card > div:first-child {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.quota-meta {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.quota-bar {
+  border-radius: 999px;
+  background: #f0f0f2;
+  height: 7px;
+  overflow: hidden;
+}
+
+.quota-bar span {
+  background: var(--debot-brand);
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  transition: width 180ms ease;
+  width: 0;
+}
+
+.item-title {
+  color: #0f172a;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item-meta,
+.item-time {
+  color: #64748b;
+  display: block;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 2px;
+}
+
+.tabs {
+  border: 1px solid var(--debot-border);
+  border-radius: 10px;
+  background: #fff;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: 1fr 1fr;
+  padding: 4px;
+}
+
+.tab {
+  background: transparent;
+  color: #64748b;
+  min-height: 30px;
+}
+
+.tab:hover:not(:disabled) {
+  background: #f1f5f9;
+  box-shadow: none;
+}
+
+.tab.is-active {
+  background: var(--debot-brand);
+  color: var(--debot-black);
+}
+
+.message {
+  color: var(--debot-black);
+  font-size: 12px;
+  line-height: 18px;
+  padding: 9px 10px;
+}
+
+.message.is-error {
+  border-color: #fecaca;
+  background: #fff1f2;
+  color: #b42318;
+}
+
+.message.is-success {
+  border-color: #bbf7d0;
+  background: #f0fdf4;
+  color: #027a48;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: calc(100vh - 214px);
+  min-height: 0;
+  overflow: auto;
+  padding-right: 2px;
+}
+
+.list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.list::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #cbd5e1;
+}
+
+.item {
+  padding: 10px;
+}
+
+.item-header {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.item-main {
+  min-width: 0;
+}
+
+.item-title {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.item-title:hover {
+  color: #c19a00;
+}
+
+.badge {
+  border-radius: 999px;
+  background: var(--debot-brand-soft);
+  color: #8a6b00;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  padding: 2px 8px;
+}
+
+.badge.deleted {
+  background: #fee2e2;
+  color: #b42318;
+}
+
+.badge.warning {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+.item-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.secondary-button {
+  border: 1px solid var(--debot-border);
+  background: #fafafa;
+  color: #475569;
+}
+
+.secondary-button:hover:not(:disabled) {
+  border-color: var(--debot-brand-border);
+  background: var(--debot-brand-soft);
+  box-shadow: none;
+}
+
+.empty {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 20px;
+  padding: 24px 12px;
+  text-align: center;
+}
+
+.login-guide {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-guide strong {
+  color: var(--debot-black);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.login-guide span {
+  max-width: 260px;
+}
+
+.login-button {
+  align-items: center;
+  border-radius: 8px;
+  background: var(--debot-brand);
+  color: var(--debot-black);
+  display: inline-flex;
+  font-size: 12px;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 18px;
+  margin-top: 4px;
+  min-height: 32px;
+  padding: 7px 14px;
+  text-decoration: none;
+}
+
+.login-button:hover {
+  background: var(--debot-brand-hover);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
