@@ -83,9 +83,9 @@ function renderList(list) {
 function renderLoginGuide() {
   elements.list.innerHTML = `
     <div class="empty login-guide">
-      <strong>未登录 debot</strong>
+      <strong>未登录 Debot</strong>
       <span>登录后才能查看和管理删推监控配置。</span>
-      <a class="login-button" href="${DEBOT_HOME_URL}" target="_blank" rel="noopener noreferrer">去 debot 登录</a>
+      <a class="login-button" href="${DEBOT_HOME_URL}" target="_blank" rel="noopener noreferrer">去 Debot 登录</a>
     </div>
   `;
 }
@@ -185,7 +185,7 @@ function formatTime(value) {
 
 function errorText(error) {
   if (isUnauthorizedError(error)) {
-    return '请先登录 debot';
+    return '请先登录 Debot';
   }
   if (error?.message === 'MISSING_TWEET_ID') {
     return '未识别到推文 ID';

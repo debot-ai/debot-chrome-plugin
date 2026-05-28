@@ -1,8 +1,8 @@
-# debot Chrome Extensions
+# Debot Chrome Extensions
 
 [中文](./README.md) | **English**
 
-Official debot Chrome extensions for use with [debot.ai](https://debot.ai/) in your browser.
+Official Debot Chrome extensions for use with [debot.ai](https://debot.ai/) in your browser.
 
 ## Extension List
 
@@ -12,7 +12,7 @@ Official debot Chrome extensions for use with [debot.ai](https://debot.ai/) in y
 
 ---
 
-## debot Tweet Delete Monitor
+## Debot Tweet Delete Monitor
 
 A Chrome extension for X/Twitter. Add tweet delete monitoring with one click on X, and view active and historical records in the extension side panel.
 
@@ -34,11 +34,11 @@ After downloading, unzip to get the `tweet-delete-monitor` folder, then follow t
 
 ### Before You Start
 
-You need to sign in to debot first:
+You need to sign in to Debot first:
 
 <https://debot.ai/>
 
-The extension uses your debot login session in the browser. If you are not signed in, the side panel shows a login prompt. Click "Sign in on debot" to open the debot homepage.
+The extension uses your Debot login session in the browser. If you are not signed in, the side panel shows a login prompt. Click "Sign in on Debot" to open the Debot homepage.
 
 ### Installation
 
@@ -50,11 +50,11 @@ The current version must be loaded in developer mode:
 3. Enable **Developer mode** in the top-right corner.
 4. Click **Load unpacked**.
 5. Select the `tweet-delete-monitor` folder (the unzipped folder, or the subdirectory in a cloned repo).
-6. Click the debot Tweet Delete Monitor icon in the toolbar and confirm the right side panel opens.
+6. Click the Debot Tweet Delete Monitor icon in the toolbar and confirm the right side panel opens.
 
 ### How to Add Delete Monitoring
 
-1. Sign in to debot.
+1. Sign in to Debot.
 2. Open <https://x.com> or <https://twitter.com>.
 3. Go to a tweet detail page, or find the tweet you want to monitor in your timeline.
 4. Click the "Monitor delete" button next to the tweet author.
@@ -106,7 +106,7 @@ Visit <https://debot.ai/> and sign in first. Then return to X, refresh the page,
 
 Common reasons include:
 
-- Not signed in to debot.
+- Not signed in to Debot.
 - Delete monitoring quota is used up.
 - The tweet link or tweet ID could not be parsed.
 - The tweet does not exist or cannot be fetched.

@@ -46,8 +46,8 @@ function injectTweetActions() {
       button.classList.add(placement.variant);
     }
     button.textContent = '监控删推';
-    button.title = '添加这条推文到 debot 删推监控';
-    button.setAttribute('aria-label', '添加这条推文到 debot 删推监控');
+    button.title = '添加这条推文到 Debot 删推监控';
+    button.setAttribute('aria-label', '添加这条推文到 Debot 删推监控');
     button.dataset.state = 'idle';
     applyKnownMonitorState(button, tweet);
     syncKnownMonitorState(button, tweet);
@@ -88,8 +88,8 @@ async function addTweetMonitor(button, tweet) {
     showButtonNotice(button, detail);
     setTimeout(() => {
       setButtonState(button, '监控删推', '', 'idle');
-      button.title = '添加这条推文到 debot 删推监控';
-      button.setAttribute('aria-label', '添加这条推文到 debot 删推监控');
+      button.title = '添加这条推文到 Debot 删推监控';
+      button.setAttribute('aria-label', '添加这条推文到 Debot 删推监控');
       button.disabled = false;
     }, 2500);
     return;
@@ -176,7 +176,7 @@ function getAddErrorMessage(error) {
 
 async function getAddErrorDetail(error) {
   if (isUnauthorizedError(error)) {
-    return `请先登录 debot 后再添加删推监控：${DEBOT_HOME_URL}`;
+    return `请先登录 Debot 后再添加删推监控：${DEBOT_HOME_URL}`;
   }
   if (isQuotaLimitError(error)) {
     return QUOTA_EXHAUSTED_MESSAGE;

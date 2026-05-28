@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "debot 删推监控",
+  "name": "Debot 删推监控",
   "description": "在 X/Twitter 上添加指定推文删推监控，并查看监控中与历史记录。",
   "version": "0.1.0",
   "permissions": ["activeTab", "alarms", "notifications", "sidePanel"],

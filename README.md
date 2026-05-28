@@ -8,11 +8,11 @@ Debot 官方 Chrome 扩展集合，用于在浏览器里配合 [debot.ai](https:
 
 | 插件 | 说明 |
 | --- | --- |
-| [tweet-delete-monitor](./tweet-delete-monitor) | debot 删推监控：在 X/Twitter 上添加指定推文删推监控，并查看监控中与历史记录 |
+| [tweet-delete-monitor](./tweet-delete-monitor) | Debot 删推监控：在 X/Twitter 上添加指定推文删推监控，并查看监控中与历史记录 |
 
 ---
 
-## debot 删推监控
+## Debot 删推监控
 
 一个用于 X/Twitter 的 Chrome 插件。你可以在 X 页面上一键把指定推文加入删推监控，并在插件侧边栏里查看监控中和历史记录。
 
@@ -34,11 +34,11 @@ Debot 官方 Chrome 扩展集合，用于在浏览器里配合 [debot.ai](https:
 
 ### 使用前准备
 
-你需要先登录 debot：
+你需要先登录 Debot：
 
 <https://debot.ai/>
 
-插件会使用浏览器里的 debot 登录态。未登录时，插件侧边栏会显示登录引导，点击「去 debot 登录」即可打开 debot 首页。
+插件会使用浏览器里的 Debot 登录态。未登录时，插件侧边栏会显示登录引导，点击「去 Debot 登录」即可打开 Debot 首页。
 
 ### 安装方式
 
@@ -50,11 +50,11 @@ Debot 官方 Chrome 扩展集合，用于在浏览器里配合 [debot.ai](https:
 3. 开启右上角「开发者模式」。
 4. 点击「加载已解压的扩展程序」。
 5. 选择目录：`tweet-delete-monitor`（解压后的文件夹，或克隆仓库里的该子目录）。
-6. 点击浏览器工具栏里的 debot 删推监控图标，确认右侧边栏可以打开。
+6. 点击浏览器工具栏里的 Debot 删推监控图标，确认右侧边栏可以打开。
 
 ### 如何添加删推监控
 
-1. 登录 debot。
+1. 登录 Debot。
 2. 打开 <https://x.com> 或 <https://twitter.com>。
 3. 进入任意推文详情页，或在时间线中找到要监控的推文。
 4. 点击推文作者旁的「监控删推」按钮。
@@ -106,7 +106,7 @@ Debot 官方 Chrome 扩展集合，用于在浏览器里配合 [debot.ai](https:
 
 常见原因包括：
 
-- 未登录 debot。
+- 未登录 Debot。
 - 删推监控额度已用完。
 - 推文链接或 tweet ID 无法解析。
 - 推文不存在或无法获取。
