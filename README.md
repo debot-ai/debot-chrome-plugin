@@ -1,5 +1,7 @@
 # debot Chrome 插件
 
+**中文** | [English](./README.en.md)
+
 debot 官方 Chrome 扩展集合，用于在浏览器里配合 [debot.ai](https://debot.ai/) 使用。
 
 ## 插件列表
